@@ -1,7 +1,8 @@
 # mzum/alpine-docker-lab
 FROM alpine:3.7
 
-ARG TAGLABEL TAG=${TAG}
+ARG TAG
+LABEL TAG=${TAG}
 
 LABEL maintainer="mzum@mzum.org"
 
