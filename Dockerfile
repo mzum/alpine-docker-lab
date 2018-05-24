@@ -26,3 +26,10 @@ RUN set -ex; \
     apk add --no-cache -t .build-deps libc6-compat; \
     apk update; \
     apk upgrade
+    
+EXPOSE 8080
+
+ENTRYPOINT ["/sbin/tini", "--", "/sbin/bash"]
+CMD ["top"]
+
+
