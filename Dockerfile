@@ -29,7 +29,9 @@ RUN set -ex; \
     
 EXPOSE 8080
 
-ENTRYPOINT ["/sbin/tini", "--", "/sbin/bash"]
-CMD ["top"]
+ENTRYPOINT ["/bin/bash"]
+#
+#ENTRYPOINT ["/sbin/tini", "--", "/bin/bash"]
+#CMD ["top"]
 
 
